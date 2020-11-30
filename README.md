@@ -1,0 +1,2 @@
+# logdel
+log deletion tool
