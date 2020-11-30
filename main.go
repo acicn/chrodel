@@ -36,11 +36,11 @@ func main() {
 	var err error
 	defer exit(&err)
 
-	flag.StringVar(&optDir, "dir", "", "日志文件目录")
-	flag.StringVar(&optMatch, "match", "", "日志文件名匹配，其中必须包含 date 子匹配名，且需要和 --pattern 参数匹配")
+	flag.StringVar(&optDir, "dir", "", "文件目录")
+	flag.StringVar(&optMatch, "match", "", "文件名匹配，其中必须包含 date 子匹配名，且需要和 --pattern 参数匹配")
 	flag.StringVar(&optLayout, "layout", "", "日期格式，参考 Go 'time' 包")
 	flag.IntVar(&optKeep, "keep", 0, "需要保留的日志天数")
-	flag.BoolVar(&optDry, "dry", false, "调试开关，并不真的要删除日志文件")
+	flag.BoolVar(&optDry, "dry", false, "调试开关，并不真的要删除文件")
 	flag.Parse()
 
 	optDir = strings.TrimSpace(optDir)
